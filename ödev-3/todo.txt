@@ -1,0 +1,24 @@
+Y- Kelimenin doğru harflerden oluşup oluşmadığı kontrol edilecektir. Eğer yanlış harf (D
+içinde olmayan) kullanıldıysa, hatalı harf kullanımı uyarısı verilecek ve girilen harf sayısı
+kadar eksi puan alınacaktır.
+
+Y- Kelime doğru harflerden oluşuyorsa ve türetilebilecek kelime listesinde var ise kelimenin
+harf sayısı kadar puan kazanılacaktır.
+
+Y- Kelime doğru harflerden oluşuyorsa fakat türetilebilecek kelime listesinde yok ise girilen
+kelimenin harf sayısı kadar eksi puan kazanılacaktır.
+
+Y- Her harf bir kez kullanılabilecektir.
+
+Y- Her adımda kazanılan puan ekrana yazdırılacaktır.
+
+Y- Kullanıcının küçük harflerle giriş yaptığı varsayılabilir.
+
+XXXXX- Aynı kelime sadece bir kere tahmin edilmelidir. Eğer ikinci kez aynı kelime tahmin edilirse
+girilen kelimenin harf sayısı kadar eksi puan almalıdır.
+
+XXXXX- Girilen tahminler minimum 2 uzunluğunda olacaktır. Tek harfli kelimeler kabul
+edilmeyecektir.
+
+Y- Tüm kelimeler girildikten ve 0 ile tahminler tamamlandıktan sonra toplam puan ekrana
+yazdırılacaktır.
