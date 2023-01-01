@@ -65,10 +65,10 @@ int main() {
 	for(i = 0; i < N; i++) {
 		for(j = 0; j < M; j++) {
 			if(!(map[i][j] == -1)) {
-				printf("[ %d ]", map[i][j]);
+				printf("[  %d ]", map[i][j]);
 			}
 			else {
-				printf("[   ]", map[i][j]);
+				printf("[    ]", map[i][j]);
 			}
 		}
 		printf("\n");
@@ -96,9 +96,15 @@ int main() {
 				}
 			}
 			// DUVARA ÇARPTIYSA YANMA
-			if(yN - 1 < 0) {
+			if((yN - 1 < 0) || (map[yN - 1][yM] > 0)) {
 				flag = 1;
-				printf("duvara carptin\n");
+				printf("YANDIN\n");
+				if(yN - 1 < 0) {
+					printf("duvara carptin\n");
+				}
+				else if(map[yN - 1][yM] > 0) {
+					printf("kuyruga bastin\n");
+				}
 				kalan = yemek_sayisi - puan;
 				printf("kalan yem sayisi:%d \n", kalan);
 				printf("yilaninizin uzunlugu: %d \n", y_uzunluk);
@@ -131,9 +137,15 @@ int main() {
 					}
 				}
 			}
-			if(yN + 1 > N - 1) {
+			if((yN + 1 > N - 1) || (map[yN + 1][yM] > 0)) {
 				flag = 1;
-				printf("duvara carptin\n");
+				printf("YANDIN\n");
+				if(yN - 1 < 0) {
+					printf("duvara carptin\n");
+				}
+				else if(map[yN + 1][yM] > 0) {
+					printf("kuyruga bastin\n");
+				}
 				kalan = yemek_sayisi - puan;
 				printf("kalan yem sayisi:%d \n", kalan);
 				printf("yilaninizin uzunlugu: %d \n", y_uzunluk);
@@ -163,9 +175,15 @@ int main() {
 					}
 				}
 			}
-			if(yM + 1 > M - 1) {
+			if((yM + 1 > M - 1) || (map[yN][yM + 1] > 0)) {
 				flag = 1;
-				printf("duvara carptin\n");
+				printf(" YANDIN\n");
+				if(yM + 1 > M - 1) {
+					printf("duvara carptin\n");
+				}
+				else if(map[yN][yM + 1] > 0) {
+					printf("kuyruga bastin\n");
+				}
 				kalan = yemek_sayisi - puan;
 				printf("kalan yem sayisi:%d \n", kalan);
 				printf("yilaninizin uzunlugu: %d \n", y_uzunluk);
@@ -195,9 +213,15 @@ int main() {
 					}
 				}
 			}
-			if(yM - 1 < 0) {
+			if((yM - 1 < 0) || (map[yN][yM - 1] > 0)) {
 				flag = 1;
-				printf("duvara carptin\n");
+				printf("YANDIN\n");
+				if(yM - 1 < 0) {
+					printf("duvara carptin\n");
+				}
+				else if(map[yN][yM - 1] > 0) {
+					printf("kuyruga bastin\n");
+				}
 				kalan = yemek_sayisi - puan;
 				printf("kalan yem sayisi:%d \n", kalan);
 				printf("yilaninizin uzunlugu: %d \n", y_uzunluk);
@@ -224,10 +248,15 @@ int main() {
 		for(i = 0; i < N; i++) {
 			for(j = 0; j < M; j++) {
 				if(!(map[i][j] == -1)) {
-					printf("[ %d ]", map[i][j]);
+					if(map[i][j] < 10) {
+						printf("[  %d ]", map[i][j]);
+					}
+					else if(map[i][j] >= 10) {
+						printf("[ %d ]", map[i][j]);
+					}
 				}
 				else {
-					printf("[   ]", map[i][j]);
+					printf("[    ]", map[i][j]);
 				}
 			}
 			printf("\n");
